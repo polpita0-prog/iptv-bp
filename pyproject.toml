@@ -1,0 +1,46 @@
+[project]
+name = "iptv-bp"
+version = "4.2.0"
+description = "IPTV BP - Odtwarzacz Android TV & PC (PL Metadata & OSD)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "IPTV BP", email = "iptv@example.com" }
+]
+dependencies = [
+    "flet==0.25.2",
+    "flet-video==0.1.0",
+    "requests>=2.31.0",
+    "urllib3>=2.0.0",
+    "certifi",
+]
+
+[tool.flet]
+org = "pl.iptvbp"
+product = "IPTV BP"
+company = "IPTV BP"
+copyright = "Copyright (C) 2026 by IPTV BP"
+build_number = 42
+
+[tool.flet.app]
+path = "."
+
+[tool.flet.android]
+split_per_abi = false
+
+[tool.flet.android.permission]
+"android.permission.INTERNET" = true
+"android.permission.ACCESS_NETWORK_STATE" = true
+"android.permission.ACCESS_WIFI_STATE" = true
+"android.permission.WAKE_LOCK" = true
+
+[tool.flet.android.feature]
+"android.software.leanback" = false
+"android.hardware.touchscreen" = false
+
+[tool.flet.android.meta_data]
+"io.flutter.embedding.android.EnableImpeller" = "false"
+
+[tool.flet.android.manifest_application]
+usesCleartextTraffic = "true"
+banner = "@mipmap/ic_launcher"
