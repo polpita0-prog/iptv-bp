@@ -1473,7 +1473,7 @@ def main(page: ft.Page):
                     refresh_osd_epg_for_item(filtered_items[new_cursor])
                 rebuild_UI()
 
-            def _ switch_worker():
+            def _switch_worker():
                 app_state["osd_cat_seq"] += 1
                 req_seq = app_state["osd_cat_seq"]
 
